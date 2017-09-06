@@ -1,0 +1,14 @@
+.\" Manpage for shutdowntimer
+
+.TH man 1 "06 Sep 2017" "3.0" "shutdowntimer man page"
+.SH NAME
+shutdowntimer \- Shuts down your computer after a timeout
+.SH SYNOPSIS
+shutdowntimer
+.SH DESCRIPTION
+shutdowntimer uses Zenity to display progress bar. Zenity is used for notifications in Ubuntu, Xubuntu and possibly other distros.
+Unless you close the notification window before the countdown ends, the computer shuts down. At script start it uses mpg123 to 
+play $HOME/.shutdowntimer/sound.mp3
+Feel free to edit the script or change the mp3 file to your needs.
+.SH AUTHOR
+Rada Berar (ujagaga@gmail.com)

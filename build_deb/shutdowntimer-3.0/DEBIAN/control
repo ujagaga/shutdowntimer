@@ -1,0 +1,9 @@
+Package: shutdowntimer
+Version: 3.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: mpg123
+Maintainer: Rada Berar <ujagaga@gmail.com>
+Homepage: 
+Description: Tool to shut down your computer on a timeout 

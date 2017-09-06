@@ -1,0 +1,15 @@
+#!/bin/sh
+# postinst script
+
+# create folder to store the sound file
+mkdir $HOME/.shutdowntimer
+# move the sound file to correct folder
+mv /usr/bin/sound.mp3 $HOME/.shutdowntimer/sound.mp3
+# change permissions, so any user can edit it
+chmod u+rw $HOME/.shutdowntimer/sound.mp3
+# add permissions for user to shutdown the system
+chmod u+s /sbin/shutdown
+# rebuild man pages database
+mandb
+
+exit 0

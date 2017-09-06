@@ -1,0 +1,9 @@
+#!/bin/sh
+# this script runs after the package has been removed
+
+rm -fr $HOME/.shutdowntimer/
+
+# rebuild man pages database because shutdowntimer man page has been deleted
+mandb
+
+exit 0

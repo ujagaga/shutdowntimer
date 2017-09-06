@@ -1,0 +1,20 @@
+#!/bin/bash
+# To gain permissions for user to shutdown the computer 
+# using a script like this, execute: 
+# sudo chmod u+s /sbin/shutdown 
+
+cd "$(dirname "$0")"
+
+mpg123 $HOME/.shutdowntimer/sound.mp3 &
+
+for i in {1..100..10}
+do echo $i
+
+sleep 1
+
+if [ $i -gt 90 ]; then
+	shutdown -h now
+fi
+
+done | zenity --progress --percentage=0 --auto-close --text="Shutting down system"
+
